@@ -1,0 +1,19 @@
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.skills > div{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.skills>div>li{
+    width: 30%;
+}
+@media (max-width: 768px) {
+    .skills > div{
+        width: 95%;
+    }
+}

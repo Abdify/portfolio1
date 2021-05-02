@@ -1,0 +1,7 @@
+.contact-icons{
+    width: 300px;
+    margin: 2.5vh auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

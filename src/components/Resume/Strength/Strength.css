@@ -1,0 +1,18 @@
+.strengths{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.strength{
+    border: 1px solid white;
+    width: 45%;
+    margin: 1rem 0;
+    padding: 1rem;
+    box-shadow: 1px 1px 10px gray;
+}
+
+@media (max-width: 768px) {
+    .strength{
+        width: 95%;
+    }
+}

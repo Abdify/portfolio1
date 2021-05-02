@@ -1,0 +1,21 @@
+.project-features{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.normal-img{
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px gray;
+    cursor: pointer;
+}
+
+.full-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    width: 100vw;
+}
