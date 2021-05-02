@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Contact from './components/Contact/Contact';
 import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
 import Projects from './components/Projects/Projects';
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route path="/projects">
             <Projects />
+          </Route>
+          <Route path="/contact">
+            <Contact />
           </Route>
           <Route path="*">
             <NotFound />

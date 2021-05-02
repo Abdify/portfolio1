@@ -1,6 +1,6 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import './Strength.css';
-
 const Strength = () => {
     const strengths = [
         {
@@ -16,21 +16,21 @@ const Strength = () => {
         },
     ];
     return (
-        <div>
-            <div className="mid-text">Abd.strength();</div>
-            <div className="strengths">
-                {
-                    strengths.map(strength => {
+        <Fade top>
+            <div>
+                <div className="mid-text">Abd.strength();</div>
+                <div className="strengths">
+                    {strengths.map((strength) => {
                         return (
                             <div className="strength">
                                 <h3 className="normal-text">{strength.title}</h3>
-                                <a href={strength.link} >{strength.description}</a>
+                                <a href={strength.link}>{strength.description}</a>
                             </div>
-                        )
-                    })
-                }
+                        );
+                    })}
+                </div>
             </div>
-        </div>
+        </Fade>
     );
 };
 

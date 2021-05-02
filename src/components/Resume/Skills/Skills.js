@@ -1,4 +1,5 @@
 import React from 'react';
+import Jello from "react-reveal/Jello";
 import { Link } from 'react-router-dom';
 import './Skills.css';
 
@@ -39,19 +40,31 @@ const Skills = () => {
                 <div>
                     <h1 className="mid-text">Abd.skills.expertise();</h1>
                     {skills.expertise.map((skill) => {
-                        return <li className="list-item">{skill}</li>;
+                        return (
+                            <Jello duration={(Math.floor(Math.random() * 3) + 1) * 1000}>
+                                <li className="list-item">{skill}</li>
+                            </Jello>
+                        );
                     })}
                 </div>
                 <div>
                     <h1 className="mid-text">Abd.skills.comfortable();</h1>
                     {skills.comfortable.map((skill) => {
-                        return <li className="list-item">{skill}</li>;
+                        return (
+                            <Jello duration={(Math.floor(Math.random() * 3) + 1) * 1000}>
+                                <li className="list-item">{skill}</li>
+                            </Jello>
+                        );
                     })}
                 </div>
                 <div>
                     <h1 className="mid-text">Abd.skills.familiar();</h1>
                     {skills.familiar.map((skill) => {
-                        return <li className="list-item">{skill}</li>;
+                        return (
+                            <Jello duration={(Math.floor(Math.random() * 3) + 1) * 1000}>
+                                <li className="list-item">{skill}</li>
+                            </Jello>
+                        );
                     })}
                 </div>
             </div>

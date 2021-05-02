@@ -17,15 +17,30 @@ const Home = () => {
                 <Link
                     className="normal-text"
                     style={linkStyle}
-                    to="//github.com/Abdify"
+                    to="//www.github.com/Abdify"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     Github
                 </Link>
                 {/* <FontAwesomeIcon icon={faLinkedinIn} /> */}
-                <Link className="normal-text" style={linkStyle} to="/">
+                <Link
+                    className="normal-text"
+                    style={linkStyle}
+                    to="//www.linkedin.com/in/abd08/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     Linkedin
+                </Link>
+                <Link
+                    className="normal-text jelly"
+                    style={linkStyle}
+                    to="//drive.google.com/file/d/1n0X-FHimn3wV1BUhHsyV0-26v51EeRJq/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Resume
                 </Link>
             </div>
         </div>

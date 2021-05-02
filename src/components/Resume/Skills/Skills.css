@@ -12,6 +12,9 @@
 .skills>div>li{
     width: 30%;
 }
+
+
+
 @media (max-width: 768px) {
     .skills > div{
         width: 95%;

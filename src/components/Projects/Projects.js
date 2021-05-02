@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import pb from "../../images/pb.png";
 import pt from "../../images/pt.png";
 import Project from './Project';
+
 const projects = [
     {
         id: 1,
@@ -52,7 +53,9 @@ const Projects = () => {
             </div>
             <div>
                 {projects.map((project) => (
-                    <Project project={project} key={project.id} />
+                    
+                        <Project project={project} key={project.id} />
+                    
                 ))}
             </div>
         </div>
