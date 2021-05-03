@@ -1,3 +1,12 @@
+@font-face {
+    font-family: Source Code;
+    src: url(./fonts/SourceCodePro-Light.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/Roboto-Bold.ttf);
+}
+
 .App {
   box-sizing: border-box;
   width: 100%;
@@ -49,6 +58,13 @@
     opacity: 1;
   }
   
+  .title-text{
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: Roboto;
+    color: #a162e8;
+    text-align: center;
+  }
 
 
   .btn {
@@ -81,6 +97,23 @@
   padding: 10px 20px;
   border: 1px solid white;
   border-radius: 5px;
+}
+.list-item-small{
+  list-style: square;
+  margin: 10px 20px;
+  color: aliceblue;
+  position: relative;
+}
+.list-item-small::before{
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 0;
+  height: 60%;
+  width: 100%;
+  background: darkslategrey;
+  transform: rotateZ(-10deg);
+  z-index: -1;
 }
 
 a{

@@ -8,16 +8,7 @@ const Project = ({project}) => {
     const [imgClicked, setImgClicked] = useState(false);
     return (
         <div>
-            <Zoom delay={1000}>
-                <p className="mid-text">{project.name}</p>
-            </Zoom>
-            <p>
-                <FontAwesomeIcon icon={faClock} /> {project.time}
-            </p>
-            <p>
-                <FontAwesomeIcon icon={faAddressCard} /> {project.description}
-            </p>
-            <div className="project-features">
+            <div className="project">
                 <div className="img-container" onClick={() => setImgClicked(!imgClicked)}>
                     <Fade left duration={1000}>
                         <img
@@ -27,21 +18,33 @@ const Project = ({project}) => {
                         />
                     </Fade>
                 </div>
-
-                <Fade right collapse>
-                    <div>
-                        <p className="normal-text">Features</p>
-                        {project.features.map((feature) => (
-                            <li className="list-item">{feature}</li>
-                        ))}
-                    </div>
-                    <div>
-                        <p className="normal-text">Technologies</p>
-                        {project.technologies.map((tech) => (
-                            <li className="list-item">{tech}</li>
-                        ))}
-                    </div>
-                </Fade>
+                <div className="project-description">
+                    <Zoom delay={1000}>
+                        <p className="title-text">{project.name}</p>
+                    </Zoom>
+                    <p>
+                        <FontAwesomeIcon icon={faClock} /> {project.time}
+                    </p>
+                    <p>
+                        <FontAwesomeIcon icon={faAddressCard} /> {project.description}
+                    </p>
+                    <Fade right collapse>
+                        <div className="project-features">
+                            <p className="normal-text">Features</p>
+                            <div>
+                                {project.features.map((feature) => (
+                                    <li className="list-item">{feature}</li>
+                                ))}
+                            </div>
+                                <p className="normal-text">Technologies</p>
+                            <div>
+                                {project.technologies.map((tech) => (
+                                    <li className="list-item-small">{tech}</li>
+                                ))}
+                            </div>
+                        </div>
+                    </Fade>
+                </div>
             </div>
         </div>
     );
