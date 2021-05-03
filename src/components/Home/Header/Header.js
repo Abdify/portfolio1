@@ -3,12 +3,24 @@ import Fade from 'react-reveal/Fade';
 import LightSpeed from "react-reveal/LightSpeed";
 import { Link } from 'react-router-dom';
 import myImg from '../../../images/image001.png';
+import vid from '../../../videos/1.mp4';
 import './Header.css';
 
 const name = "${name}";
 const titles = [
     <span>
         <Fade bottom>
+            <div className="video-container">
+                <video
+                    playsinline
+                    autoPlay
+                    muted
+                    loop={true}
+                    preload="auto"
+                    src={vid}
+                ></video>
+                <div className="overlay"></div>
+            </div>
             <img src={myImg} alt="" />
         </Fade>
         <Fade top>

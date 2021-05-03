@@ -4,15 +4,16 @@
     min-height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
 .header-container img{
     display: block;
     max-width: 300px;
-    margin: 1rem auto;
+    margin: 2rem auto;
 }
 .property-container{
     display: flex;
@@ -22,4 +23,33 @@
 .properties{
     margin-left: 2rem;
     text-decoration: none;
+}
+video{
+    height: 100%;
+    width: 100%;
+}
+.overlay{
+  background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: overlay;
+}
+.video-container{
+    height: 512px;
+    width: 512px;
+    mix-blend-mode: lighten;
+    overflow: hidden;
+    position: absolute;
+    left: 32%;
+    top: 2%;
+}
+
+@media (max-width: 768px) {
+    .video-container{
+        left: -18%;
+        top: -6%;
+    }
 }
