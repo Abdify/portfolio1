@@ -12,7 +12,7 @@ const titles = [
             <img src={myImg} alt="" />
         </Fade>
         <Fade top>
-            Hello, I am {name}
+            <span>Hi, I am {name};</span>
         </Fade>
     </span>,
     // <span>Abd.who() = Web Developer;</span>,
@@ -51,7 +51,9 @@ const Header = () => {
     return (
         <div className="header-container">
             <div className="mid-text">const name = Abd;</div>
-            <div className="big-text">{titles[n]}</div>
+            <div className="big-text">
+                {titles[n]}
+            </div>
             {n < titles.length - 1 ? (
                 <button className="btn" onClick={() => setN(n + 1)}>
                     .next()

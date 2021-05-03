@@ -1,4 +1,5 @@
-import { faAddressCard, faClock } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faAddressCard, faClock, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from 'react';
 import Fade from "react-reveal/Fade";
@@ -19,8 +20,10 @@ const Project = ({project}) => {
                     </Fade>
                 </div>
                 <div className="project-description">
-                    <Zoom delay={1000}>
-                        <p className="title-text">{project.name}</p>
+                    <Zoom delay={500}>
+                        <p className="title-text" data-text={project.name}>
+                            {project.name}
+                        </p>
                     </Zoom>
                     <p>
                         <FontAwesomeIcon icon={faClock} /> {project.time}
@@ -33,14 +36,28 @@ const Project = ({project}) => {
                             <p className="normal-text">Features</p>
                             <div>
                                 {project.features.map((feature) => (
-                                    <li className="list-item">{feature}</li>
+                                    <Fade bottom delay={(Math.floor(Math.random() * 20) + 1) * 100}>
+                                        <li className="list-item">{feature}</li>
+                                    </Fade>
                                 ))}
                             </div>
-                                <p className="normal-text">Technologies</p>
+                            <p className="normal-text">Technologies</p>
                             <div>
                                 {project.technologies.map((tech) => (
-                                    <li className="list-item-small">{tech}</li>
+                                    <Fade top delay={(Math.floor(Math.random() * 10) + 1) * 100}>
+                                        <li className="list-item-small">{tech}</li>
+                                    </Fade>
                                 ))}
+                            </div>
+                            <div className="project-link">
+                                <div>
+                                    <FontAwesomeIcon icon={faGlobe} />{" "}
+                                    <a href={project.site}>Live View</a>
+                                </div>
+                                <div>
+                                    <FontAwesomeIcon icon={faGithub} />
+                                    <a href={project.github}>Github</a>
+                                </div>
                             </div>
                         </div>
                     </Fade>

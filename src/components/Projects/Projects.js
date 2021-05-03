@@ -48,8 +48,8 @@ const projects = [
 const Projects = () => {
     return (
         <div>
-            <div className="big-text">
-                <Link to="/">Abd</Link>.projects();
+            <div className="title-text" data-text="export Abd.projects();">
+                export <Link to="/">Abd</Link>.projects();
             </div>
             <div>
                 {projects.map((project) => (

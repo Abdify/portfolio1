@@ -9,6 +9,7 @@
     margin: 1rem 0;
     padding: 1rem;
     box-shadow: 1px 1px 10px gray;
+    background-color: #141E30;
 }
 
 @media (max-width: 768px) {

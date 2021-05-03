@@ -33,7 +33,7 @@ const Skills = () => {
         }
     return (
         <div style={{ margin: "1rem 0" }}>
-            <div className="big-text">
+            <div className="title-text" data-text="export Abd.resume();">
                 export <Link to="/">Abd</Link>.resume();
             </div>
             <div className="skills">
